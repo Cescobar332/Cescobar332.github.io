@@ -470,6 +470,36 @@ a {
     padding: 12px;
 }
 
+.repo-kind {
+    font-family: "Manrope", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.repo-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.repo-tags li {
+    font-size: 0.8rem;
+    color: var(--text);
+    background: var(--surface-soft);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 3px 8px;
+}
+
 .repo-card__top {
     display: flex;
     justify-content: space-between;
