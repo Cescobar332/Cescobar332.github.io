@@ -16,7 +16,7 @@ const translations = {
         navAriaLabel: "Secciones del portafolio",
         navAbout: "Sobre mí",
         navSkills: "Habilidades",
-        navRepos: "Repositorios",
+        navRepos: "Proyectos",
         navContact: "Contacto",
         languageLabel: "Idioma",
         languageOptionEs: "Español",
@@ -31,11 +31,11 @@ const translations = {
             "Construyo soluciones digitales robustas, escalables y fáciles de mantener.",
         heroLead:
             "Portafolio personal de Carlos Fernando Escobar Silva. Aquí encontrarás mi enfoque, mis fortalezas técnicas y una selección de repositorios públicos de GitHub.",
-        heroPrimaryCta: "Ver repositorios",
+        heroPrimaryCta: "Ver proyectos",
         heroSecondaryCta: "Contactar",
-        stat1: "áreas clave: backend, datos y automatización",
-        stat2: "enfoque en código limpio y mantenible",
-        stat3: "mentalidad de producto y mejora continua",
+        stat1: "libros de historia indexados en mi sistema RAG",
+        stat2: "preguntas fuera del corpus rechazadas correctamente",
+        stat3: "stacks usados: Python, NestJS/Next.js, Laravel",
         heroCardAriaLabel: "Resumen profesional",
         profileBadge: "Disponible para proyectos y trabajo formal",
         profileSummary:
@@ -63,11 +63,11 @@ const translations = {
         skill3Title: "Git y despliegue",
         skill3Body:
             "Flujos de trabajo con git, documentación clara (swagger) y manejo de repositorios (GitHub o Microsoft Azure DevOps).",
-        reposTitle: "Repositorios destacados",
+        reposTitle: "Proyectos",
         repoStatusLoading: "Cargando repositorios...",
-        repoStatusReady: "Principales proyectos",
+        repoStatusReady: "Del más reciente al más antiguo",
         repoLinkLabel: "Ver repositorio",
-        repoImagePlaceholder: "Espacio para imagen",
+        repoImagePlaceholder: "Captura pendiente",
         contactTag: "Contacto",
         contactTitle: "Construyamos algo profesional.",
         contactEmail: "Correo: cfes2004@gmail.com",
@@ -85,7 +85,7 @@ const translations = {
         navAriaLabel: "Portfolio sections",
         navAbout: "About",
         navSkills: "Skills",
-        navRepos: "Repositories",
+        navRepos: "Projects",
         navContact: "Contact",
         languageLabel: "Language",
         languageOptionEs: "Spanish",
@@ -99,11 +99,11 @@ const translations = {
             "I build robust, scalable, and maintainable digital solutions.",
         heroLead:
             "Personal portfolio of Carlos Fernando Escobar Silva. Here you can explore my approach, technical strengths, and a curated set of public GitHub repositories.",
-        heroPrimaryCta: "View repositories",
+        heroPrimaryCta: "View projects",
         heroSecondaryCta: "Contact",
-        stat1: "key areas: backend, data, and automation",
-        stat2: "focus on clean and maintainable code",
-        stat3: "product mindset and continuous improvement",
+        stat1: "history books indexed in my RAG system",
+        stat2: "out-of-corpus questions correctly refused",
+        stat3: "stacks used: Python, NestJS/Next.js, Laravel",
         heroCardAriaLabel: "Professional summary",
         profileBadge: "Open to projects and formal opportunities",
         profileSummary:
@@ -129,11 +129,11 @@ const translations = {
         skill3Title: "Git and deployment",
         skill3Body:
             "Git workflows, clear documentation (Swagger), and repository management (GitHub or Microsoft Azure DevOps).",
-        reposTitle: "Featured repositories",
+        reposTitle: "Projects",
         repoStatusLoading: "Loading repositories...",
-        repoStatusReady: "Main projects",
+        repoStatusReady: "Newest to oldest",
         repoLinkLabel: "View repository",
-        repoImagePlaceholder: "Image placeholder",
+        repoImagePlaceholder: "Screenshot coming soon",
         contactTag: "Contact",
         contactTitle: "Let's build something professional.",
         contactEmail: "Email: cfes2004@gmail.com",
@@ -149,48 +149,46 @@ const translations = {
 
 const featuredRepos = [
     {
-        name: "expense-tracker",
+        name: "RAG de historia colombiana",
         description: {
-            es: "Aplicación para control y seguimiento de gastos personales.",
-            en: "Application for tracking and managing personal expenses.",
+            es: "API que responde preguntas sobre 47 libros de historia citando la fuente y negándose a responder cuando el corpus no tiene la información. Evaluada con 30 preguntas propias: 12/12 abstenciones correctas.",
+            en: "API that answers questions about 47 history books, citing sources and refusing to answer when the corpus lacks the information. Evaluated on 30 hand-written questions: 12/12 correct abstentions.",
         },
-        language: "GitHub",
-        stars: "Repo",
-        link: "https://github.com/Cescobar332/expense-tracker",
-        image: "img/Screenshot 2026-04-09 152618.png",
-    },
-    {
-        name: "gestion-financiera-fullstack",
-        description: {
-            es: "Sistema para administración y visualización financiera.",
-            en: "Fullstack system for financial management and visualization.",
-        },
-        language: "GitHub",
-        stars: "Repo",
-        link: "https://github.com/Cescobar332/gestion-financiera-fullstack",
-        image: "img/Screenshot 2026-04-09 152830.png",
-    },
-    {
-        name: "virtual_pro",
-        description: {
-            es: "Página de un PreIcfes Virtual.",
-            en: "Landing page for a virtual pre-college exam preparation program.",
-        },
-        language: "GitHub",
-        stars: "Repo",
-        link: "https://github.com/newMoonlight11/virtual_pro",
+        tags: ["Python", "FastAPI", "ChromaDB", "Gemini"],
+        link: "https://github.com/Cescobar332/PrimerProyectoRAG",
         image: "",
     },
     {
-        name: "ecolab_",
+        name: "Expense Tracker",
         description: {
-            es: "Proyecto de Grado de la Universidad.",
-            en: "University graduation project.",
+            es: "Aplicación fullstack para registrar gastos e ingresos por categoría, con verificación de correo y paginación de transacciones.",
+            en: "Fullstack app to log expenses and income by category, with email verification and paginated transactions.",
         },
-        language: "GitHub",
-        stars: "Repo",
+        tags: ["NestJS", "Next.js", "Prisma", "TypeScript"],
+        link: "https://github.com/Cescobar332/expense-tracker",
+        image: "img/expense-tracker.png",
+    },
+    {
+        name: "Gestión financiera",
+        description: {
+            es: "Aplicación para administrar y visualizar movimientos financieros.",
+            en: "App to manage and visualize financial transactions.",
+        },
+        tags: ["Next.js", "Prisma", "Supabase"],
+        kind: { es: "Prueba técnica", en: "Technical test" },
+        link: "https://github.com/Cescobar332/gestion-financiera-fullstack",
+        image: "img/gestion-financiera.png",
+    },
+    {
+        name: "Ecolab",
+        description: {
+            es: "Proyecto de grado universitario desarrollado en equipo.",
+            en: "University capstone project built as a team.",
+        },
+        tags: ["Laravel", "PHP"],
+        kind: { es: "Académico", en: "Academic" },
         link: "https://github.com/newMoonlight11/ecolab_",
-        image: "img/Screenshot 2025-07-18 131356.png",
+        image: "img/ecolab.png",
     },
 ];
 
@@ -207,8 +205,10 @@ const renderRepositories = (repositories) => {
 
     repositoriesContainer.innerHTML = repositories
         .map((repository, index) => {
-            const language = repository.language || "Repository";
-            const stars = repository.stars || "Repo";
+            const tags = repository.tags || [];
+            const kind = repository.kind
+                ? repository.kind[currentLanguage] || repository.kind.es
+                : "";
             const url = repository.link || "#";
             const descriptionSource = repository.description;
             const description =
@@ -223,14 +223,11 @@ const renderRepositories = (repositories) => {
             return `
         <article class="repo-card">
             <div class="repo-card__media ${image ? "repo-card__media--has-image" : ""}">
-                ${image ? `<img src="${image}" alt="${name} preview">` : `<div class="repo-card__media-placeholder">${placeholder}</div>`}
+                ${image ? `<img src="${image}" alt="${name}">` : `<div class="repo-card__media-placeholder">${placeholder}</div>`}
             </div>
-            <div class="repo-card__top">
-                <span class="repo-pill">${language}</span>
-                <span class="repo-stars">${stars} ★</span>
-            </div>
-            <h3>${name}</h3>
+            <h3>${name}${kind ? ` <span class="repo-kind">${kind}</span>` : ""}</h3>
             <p>${description}</p>
+            <ul class="repo-tags">${tags.map((tag) => `<li>${tag}</li>`).join("")}</ul>
             <a href="${url}" target="_blank" rel="noreferrer">${repoLinkLabel}</a>
         </article>
       `;
